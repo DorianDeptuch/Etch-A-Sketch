@@ -1,0 +1,47 @@
+#etch-a-sketch {
+    background: firebrick;
+    height: 600px;
+    width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+#container-div {
+    background: darkgray;
+    height: 400px;
+    width: 400px;
+    align-self: center;
+    margin: 30px;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    /* grid-template-rows: repeat (17, 1fr); */
+}
+#knobs-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 120px;
+}
+#title {
+    font-family: "Galada";
+    font-size: 40px;
+    color: goldenrod;
+    padding: 0px 20px 0px 20px;
+}
+.knob {
+    background: white;
+    border-radius: 50%;
+    border: gray 2px dashed;
+    height: 70px;
+    width: 70px;
+    align-self: center;
+}
+.draw:hover {
+    background: black;
+}
