@@ -11,12 +11,18 @@
     border: 2px solid black;
     border-radius: 30px;
 }
+#clearAndPrompt {
+    width: 30%;
+    height: 30px;
+    align-self: center;
+    margin-top: 0px;
+}
 #container-div {
     background: darkgray;
     height: 400px;
     width: 400px;
     align-self: center;
-    margin: 30px;
+    /* margin: 30px; */
     border: 2px solid black;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
@@ -42,6 +48,9 @@
     width: 70px;
     align-self: center;
 }
-.draw:hover {
+/* .draw:hover {
+    background: black;
+} */
+.black {
     background: black;
 }
