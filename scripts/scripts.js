@@ -21,39 +21,52 @@ for (let i = 0; i < 256; i++) {
 
 clearAndPrompt.addEventListener('click', function (){
 
-    containerDiv.innerHTML="";
+    containerDiv.innerHTML = "";
+    grid = [];
 
-    
-    let selection = parseInt(prompt("Select the size of the grid", ''));
+    // let byeDiv = document.getElementsByClassName('.draw');
+    // let div = document.querySelector('div');
+    // containerDiv = document.querySelector('#container-div');
 
-    if (!selection){
-        return;
-    } else if (isNaN(selection) || selection > 100 || selection < 1){
-        alert("Please enter a number (1-100)");
-        return;
-    } 
-    
-    containerDiv.style.gridTemplateColumns = `repeat(${selection}, 1fr)`;
-
-    for (let j = 0; j < selection^2; j++) {
-        let div = document.createElement('div');
-        grid.push(div);
-        
-        grid.forEach(function (grid){
-            containerDiv.appendChild(div);
-        });
-    
-        div.addEventListener('mouseover', function (event) {
-            event.target.style.background = "black";
-        });
-    }
-});
-
-
-
-    // for (let j = 0; j < 256; j++) {
-    //     grid.pop();
+    // for (let k = 0; k < grid.length; k++){
+    //     grid.forEach(function (){
+    //         containerDiv.removeChild(containerDiv.firstChild); <---- THROWS ERROR FOR SOME REASON
+    //     });
+    //     console.log(grid);
     // }
+    // console.log(grid);
+
+    setTimeout(function (){
+        let selection = parseInt(prompt("Select the size of the grid", ''));
+
+        if (isNaN(Number(selection)) || selection > 100 || selection < 1){
+            alert("Please enter a number (1-100)");
+        } else if (!selection){
+            return;
+        } else {
+            newGrid();
+            return selection;
+        }
+        function newGrid(){
+            let selectionSquared = selection*selection;
+            containerDiv.style.gridTemplateColumns = `repeat(${selection}, 1fr)`;
+
+            for (let j = 0; j < selectionSquared; j++) {
+                console.log(((j/selectionSquared)*100).toFixed(2) +'% loaded...');
+                let div = document.createElement('div');
+                grid.push(div);
+                
+                grid.forEach(function (grid){
+                    containerDiv.appendChild(div);
+                });
+            
+                div.addEventListener('mouseover', function (event) {
+                    event.target.style.background = "black";
+                });
+            }
+        }
+    }, 1000);
+});
 
 
 

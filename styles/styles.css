@@ -22,11 +22,9 @@
     height: 400px;
     width: 400px;
     align-self: center;
-    /* margin: 30px; */
     border: 2px solid black;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    /* grid-template-rows: repeat (17, 1fr); */
 }
 #knobs-title {
     display: flex;
@@ -48,9 +46,7 @@
     width: 70px;
     align-self: center;
 }
-/* .draw:hover {
-    background: black;
-} */
+
 .black {
     background: black;
 }
