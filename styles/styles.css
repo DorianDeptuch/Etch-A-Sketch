@@ -50,3 +50,30 @@
 .black {
     background: black;
 }
+input {
+    opacity: 0.01;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+}
+input:hover {
+    opacity: 1;
+}
+#rainbow {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+#rainbow:hover {
+    background: rgb(255,21,0);
+    background: linear-gradient(90deg,
+ rgba(255,21,0,1) 0%,
+  rgba(255,219,0,1) 10%,
+   rgba(231,194,0,1) 18%,
+    rgba(52,255,0,1) 27%,
+     rgba(0,255,226,1) 44%,
+      rgba(8,0,255,1) 62%,
+       rgba(141,0,255,1) 78%,
+        rgba(219,0,178,1) 93%,
+         rgba(255,0,0,1) 100%);
+}
