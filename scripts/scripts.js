@@ -15,7 +15,10 @@ function newGrid(selection) {
     let div = document.createElement("div");
     containerDiv.appendChild(div);
 
-    div.addEventListener("mouseover", function (event, color) {
+    div.addEventListener("mouseover", function (event) {
+      //make a div.addEventListener("mouseover", function (event) {
+      //for each of the 4 variables below and add an erase variable
+      //where the color goes back to white
       let ink = "black";
       let random_rgba = rainbowColors();
       let color = chooseColor();
